@@ -7,7 +7,7 @@ public class FibonacciSeries {
         int b = 1;
         int count =2;
         System.out.print(a+" "+b);
-        while (count<=num){
+        while (count<num){
             int temp = b;
             b = b + a;
             a = temp;
