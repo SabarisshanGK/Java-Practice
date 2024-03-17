@@ -1,25 +1,29 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class DulicateValuesinArray {
     // Function to find Duplicate elemets in array
-    static String duplicateElemets( String[] arr ){
+    static ArrayList<String> duplicateElemets(String[] arr ){
+
+        ArrayList<String> ans = new ArrayList<>();
         int count = 0;
-        for(int i = 0; i < arr.length; i++){
-            for(int j = 0; j < arr.length; j++){
+        for(int i = 0 ; i< arr.length; i++){
+            for( int j = i+1; j < arr.length;j++){
                 if(arr[i] == arr[j]){
-                    return arr[i];
+                    ans.add(arr[i]);
                 }
+                continue;
             }
         }
-        return  "";
+        return ans;
     }
 
     //Main
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        String[] arr = {"C++","C++","Python","java","JavaScript"};
+        String[] arr = {"C++","Python","java","C++","Python","javascript","javascript"};
 
-        String ans = duplicateElemets(arr);
+        ArrayList<String> ans = duplicateElemets(arr);
 
         System.out.println("The duplicate element is "+ ans);
     }
