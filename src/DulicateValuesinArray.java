@@ -21,7 +21,7 @@ public class DulicateValuesinArray {
     //Main
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        String[] arr = {"C++","Python","java","C++","Python","javascript","javascript"};
+        String[] arr = {"C++","Python","java","C++","javascript","javascript"};
 
         ArrayList<String> ans = duplicateElemets(arr);
 
